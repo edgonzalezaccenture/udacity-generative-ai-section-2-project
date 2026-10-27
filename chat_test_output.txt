@@ -1,0 +1,20 @@
+### [all] What problems did the Apollo 13 crew face with carbon dioxide?
+The Apollo 13 crew faced issues with carbon dioxide levels due to a malfunctioning carbon dioxide sensor, which resulted in erratic readings. As a response, they switched to a secondary cartridge for carbon dioxide removal. Additionally, there were concerns about reaching the red line CO2 value for the secondary canister, prompting the crew to prepare to switch to the Command Module canisters if n
+Sidebar metrics: [(':green[Response Relevancy]', '0.959'), (':green[Faithfulness]', '1.000')]
+Errors: []
+### [challenger] Who was on board Challenger for STS-51L?
+The crew on board Challenger for STS-51L included:
+1. Francis Dick Scobee (Commander)
+2. Michael J. Smith (Pilot)
+3. Dr. Judy Resnick (Mission Specialist)
+4. Ellison Onizuka (Mission Specialist)
+5. Dr. Ronald McNair (Mission Specialist)
+6. Krista McAuliffe (Payload Specialist)
+7. Greg Jarvis (Payload Specialist) [Source 4].
+Sidebar metrics: [(':green[Response Relevancy]', '0.952'), (':green[Faithfulness]', '1.000')]
+Errors: []
+### [challenger] And which of them was the teacher?
+Krista McAuliffe was the teacher on board Challenger for STS-51L. She was selected as the first private citizen to fly in space as part of the Teacher in Space program [Source 1][Source 2].
+Sidebar metrics: [(':red[Response Relevancy]', '0.409'), (':green[Faithfulness]', '1.000')]
+Errors: []
+Messages in history: 6

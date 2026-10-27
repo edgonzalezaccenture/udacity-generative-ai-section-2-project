@@ -10,7 +10,6 @@ from typing import Dict, List, Optional
 try:
     from ragas import SingleTurnSample
     from ragas.metrics import BleuScore, NonLLMContextPrecisionWithReference, ResponseRelevancy, Faithfulness, RougeScore
-    from ragas import evaluate
     RAGAS_AVAILABLE = True
 except ImportError:
     RAGAS_AVAILABLE = False

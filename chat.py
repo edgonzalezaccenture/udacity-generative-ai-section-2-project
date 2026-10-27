@@ -8,8 +8,6 @@ and feedback collection for continuous improvement.
 
 import streamlit as st
 import os
-import json
-import pandas as pd
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -18,16 +16,9 @@ import ragas_evaluator
 import rag_client
 import llm_client
 
-from pathlib import Path
 from typing import Dict, List, Optional
 
-# RAGAS imports
-try:
-    from ragas import SingleTurnSample
-    RAGAS_AVAILABLE = True
-except ImportError:
-    RAGAS_AVAILABLE = False
-    st.warning("RAGAS not available. Install with: pip install ragas")
+RAGAS_AVAILABLE = ragas_evaluator.RAGAS_AVAILABLE
 
 # Page configuration
 st.set_page_config(
@@ -36,17 +27,20 @@ st.set_page_config(
     layout="wide"
 )
 
+if not RAGAS_AVAILABLE:
+    st.warning("RAGAS not available. Install with: pip install ragas")
+
 def discover_chroma_backends() -> Dict[str, Dict[str, str]]:
     """Discover available ChromaDB backends in the project directory"""
 
     return rag_client.discover_chroma_backends()
 
-#@st.cache_resource
+@st.cache_resource
 def initialize_rag_system(chroma_dir: str, collection_name: str):
     """Initialize the RAG system with specified backend (cached for performance)"""
 
     try:
-       return rag_client.initialize_rag_system(chroma_dir, collection_name)
+        return rag_client.initialize_rag_system(chroma_dir, collection_name)
     except Exception as e:
         return None, False, str(e)
 
@@ -101,7 +95,7 @@ def display_evaluation_metrics(scores: Dict[str, float]):
                 color = "red"
             
             st.sidebar.metric(
-                label=metric_name.replace('_', ' ').title(),
+                label=f":{color}[{metric_name.replace('_', ' ').title()}]",
                 value=f"{score:.3f}",
                 delta=None
             )

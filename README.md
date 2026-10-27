@@ -28,6 +28,7 @@ Documentación de la formación, en el mismo orden en que aparece en el curso:
 | [batch_evaluate.py](batch_evaluate.py) | Evaluación por lotes sobre `evaluation_dataset.txt`, con resultado por pregunta y agregado por métrica. |
 | [evaluation_dataset.txt](evaluation_dataset.txt) | 9 preguntas de prueba con su respuesta esperada (resumen, emergencia, análisis de desastres, tripulación, técnico y cronología). |
 | [evaluation_results.csv](evaluation_results.csv) · [evaluation_output.txt](evaluation_output.txt) | Resultados de la última evaluación por lotes. |
+| [test_chat.py](test_chat.py) · [chat_test_output.txt](chat_test_output.txt) | Prueba de extremo a extremo del chat (sin navegador): 3 turnos con filtro por misión y pregunta de seguimiento, y su resultado. |
 | [data_text/](data_text/) | Textos de la NASA usados por el pipeline. |
 | [nasa_rag_project.zip](nasa_rag_project.zip) | Paquete de entrega para Udacity. |
 
@@ -41,6 +42,7 @@ python embedding_pipeline.py --data-path ./data_text --chunk-size 1000 --chunk-o
 python embedding_pipeline.py --stats-only
 python batch_evaluate.py --dataset evaluation_dataset.txt --use-mission-filter --n-results 8
 streamlit run chat.py
+PYTHONPATH=. python test_chat.py          # prueba del chat sin navegador
 ```
 
 ## Resultados de la evaluación

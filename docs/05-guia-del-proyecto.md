@@ -22,6 +22,8 @@ By completing this project, students will learn to:
 ├── rag_client.py           # RAG system client (retrieval, mission filter, context)
 ├── ragas_evaluator.py      # RAGAS evaluation metrics
 ├── batch_evaluate.py       # Batch evaluation over evaluation_dataset.txt
+├── test_chat.py            # End-to-end test of the Streamlit chat (headless)
+├── chat_test_output.txt    # Output of the last chat test run
 ├── evaluation_dataset.txt  # Test questions with expected answers (6 categories)
 ├── evaluation_results.csv  # Per-question results of the last batch evaluation
 ├── evaluation_output.txt   # Console output (answers, per-question and aggregate scores)
@@ -61,6 +63,9 @@ streamlit run chat.py
 The sidebar lets you pick the ChromaDB collection, the OpenAI model, the number of documents to retrieve (top-k)
 and a mission filter. Each answer shows its retrieved sources, and the RAGAS scores of the last answer are shown
 in the sidebar.
+
+To test the app end to end without a browser (three turns: all missions, Challenger filter and a follow-up
+question), run `PYTHONPATH=. python test_chat.py`; the last run is saved in `chat_test_output.txt`.
 
 ### 3. Batch evaluation
 
