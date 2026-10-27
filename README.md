@@ -12,3 +12,4 @@ Documentación de la formación, en el mismo orden en que aparece en el curso:
 |---|---|
 | [docs/01-resumen-del-proyecto.md](docs/01-resumen-del-proyecto.md) | Resumen del proyecto: la misión, los cinco componentes que hay que construir y cómo se evalúa. |
 | [docs/02-configuracion-del-entorno.md](docs/02-configuracion-del-entorno.md) | Entorno: Python, los SDK de OpenAI, Chroma y RAGAS, y la instalación en una máquina local. |
+| [docs/03-instrucciones.md](docs/03-instrucciones.md) | Instrucciones: enlace al código inicial de Udacity, los cinco archivos con sus tareas (`llm_client.py`, `rag_client.py`, `embedding_pipeline.py`, `ragas_evaluator.py` y `chat.py`) y la lista de verificación de la entrega, con `evaluation_dataset.txt` y el `.zip`. |

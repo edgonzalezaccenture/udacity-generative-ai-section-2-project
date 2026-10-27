@@ -28,7 +28,7 @@ Antes de comenzar, asegúrate de tener lo siguiente:
 - Una clave API activa de OpenAI. Las instrucciones para obtener una clave API de OpenAI con presupuesto están en las páginas siguientes.
 - Clona el repositorio de GitHub del proyecto desde: (enlace).
 
-> El enlace al repositorio de GitHub del proyecto no venía en el texto copiado del curso.
+> El enlace no venía en esta página. Está en las [instrucciones](03-instrucciones.md): [github.com/udacity/cd13318-exercises-project](https://github.com/udacity/cd13318-exercises-project/).
 
 ### Pasos de instalación
 
