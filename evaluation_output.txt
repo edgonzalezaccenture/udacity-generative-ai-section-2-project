@@ -1,0 +1,66 @@
+Loaded 9 questions from evaluation_dataset.txt
+[1/9] (summary) What went wrong during the Apollo 13 mission and how did the crew get back to Earth?
+    Answer: The retrieved documents do not provide specific details on what went wrong during the Apollo 13 mission or the exact procedures the crew followed to return to Earth. However, it is known from historic...
+    Sources: ['apollo_13']
+    Scores: {'response_relevancy': 0.0, 'faithfulness': 0.5714285714285714, 'bleu_score': 0.04491575568657404, 'rouge_score': 0.36734693877551017}
+[2/9] (emergency) What did the Apollo 13 crew report to Mission Control right after the explosion?
+    Answer: The retrieved documents don't cover the specific communications from the Apollo 13 crew immediately after the explosion.
+    Sources: ['apollo_13']
+    Scores: {'response_relevancy': 0.6637339747921108, 'faithfulness': 0.0, 'bleu_score': 0.01117358032430412, 'rouge_score': 0.1276595744680851}
+[3/9] (technical) How did the Apollo 13 crew deal with the rising carbon dioxide levels in the lunar module?
+    Answer: The Apollo 13 crew dealt with the rising carbon dioxide levels in the lunar module by rigging up a device to reduce the carbon dioxide concentration. This homemade device, combined with the addition o...
+    Sources: ['apollo_13']
+    Scores: {'response_relevancy': 0.9546024455699215, 'faithfulness': 1.0, 'bleu_score': 0.11150559454415963, 'rouge_score': 0.2038216560509554}
+[4/9] (disaster_analysis) What happened to Challenger shortly after launch according to the mission audio?
+    Answer: According to the mission audio, the Challenger experienced an explosion approximately 1 minute and 30 seconds after launch at 11:40 a.m. This event was described as a national tragedy, and preliminary...
+    Sources: ['challenger']
+    Scores: {'response_relevancy': 0.7556122696245633, 'faithfulness': 1.0, 'bleu_score': 0.02756354351727598, 'rouge_score': 0.2391304347826087}
+[5/9] (timeline) How long after liftoff did the Challenger accident happen and what were the vehicle's last reported speed and altitude?
+    Answer: The Challenger accident occurred approximately 1 minute and 15 seconds after liftoff, as indicated in the transcripts [Source 4]. The last reported speed of the vehicle was 2,900 feet per second, and ...
+    Sources: ['challenger']
+    Scores: {'response_relevancy': 0.8879591876211558, 'faithfulness': 0.8, 'bleu_score': 0.033797243565692164, 'rouge_score': 0.4337349397590362}
+[6/9] (crew) Who was on board Challenger for mission STS-51L?
+    Answer: The crew on board Challenger for mission STS-51L included:
+1. Francis Dick Scobee (Commander)
+2. Michael J. Smith (Pilot)
+3. Dr. Judy Resnick (Mission Specialist)
+4. Ellison Onizuka (Mission Speciali...
+    Sources: ['challenger']
+    Scores: {'response_relevancy': 0.9517631563053343, 'faithfulness': 1.0, 'bleu_score': 0.002684204076215516, 'rouge_score': 0.28571428571428575}
+[7/9] (crew) Who were the Apollo 11 astronauts and what was each one's role?
+    Answer: The Apollo 11 astronauts were:
+1. Neil A. Armstrong - Commander
+2. Michael Collins - Command Module Pilot
+3. Edwin E. Aldrin, Jr. - Lunar Module Pilot [Source 1].
+    Sources: ['apollo_11']
+    Scores: {'response_relevancy': 0.8300874577682963, 'faithfulness': 1.0, 'bleu_score': 0.0, 'rouge_score': 0.41269841269841273}
+[8/9] (technical) What were the 1201 and 1202 program alarms during the Apollo 11 lunar descent?
+    Answer: The retrieved documents do not provide specific details about the 1201 and 1202 program alarms during the Apollo 11 lunar descent. They mention that alarms occurred approximately 5 minutes after the i...
+    Sources: ['apollo_11']
+    Scores: {'response_relevancy': 0.0, 'faithfulness': 0.8, 'bleu_score': 0.023541633249532352, 'rouge_score': 0.11382113821138211}
+[9/9] (timeline) When did Apollo 11 land on the Moon and when did Neil Armstrong first step onto the surface?
+    Answer: The retrieved documents do not specify the exact time of the Apollo 11 landing on the Moon or the time when Neil Armstrong first stepped onto the lunar surface. Therefore, I cannot provide that inform...
+    Sources: ['apollo_11']
+    Scores: {'response_relevancy': 0.0, 'faithfulness': 1.0, 'bleu_score': 0.0563798644634915, 'rouge_score': 0.2340425531914894}
+================================================================================
+PER-QUESTION RESULTS
+================================================================================
+            category     mission  response_relevancy  faithfulness  bleu_score  rouge_score
+0            summary   apollo_13               0.000         0.571       0.045        0.367
+1          emergency   apollo_13               0.664         0.000       0.011        0.128
+2          technical   apollo_13               0.955         1.000       0.112        0.204
+3  disaster_analysis  challenger               0.756         1.000       0.028        0.239
+4           timeline  challenger               0.888         0.800       0.034        0.434
+5               crew  challenger               0.952         1.000       0.003        0.286
+6               crew   apollo_11               0.830         1.000       0.000        0.413
+7          technical   apollo_11               0.000         0.800       0.024        0.114
+8           timeline   apollo_11               0.000         1.000       0.056        0.234
+================================================================================
+AGGREGATE (per metric)
+================================================================================
+                     mean    std    min    max  count
+response_relevancy  0.560  0.430  0.000  0.955    9.0
+faithfulness        0.797  0.334  0.000  1.000    9.0
+bleu_score          0.035  0.034  0.000  0.112    9.0
+rouge_score         0.269  0.116  0.114  0.434    9.0
+Per-question results saved to evaluation_results.csv

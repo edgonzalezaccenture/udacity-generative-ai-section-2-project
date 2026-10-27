@@ -1,0 +1,54 @@
+# NASA Mission Intelligence - evaluation dataset
+#
+# Used by batch_evaluate.py (python batch_evaluate.py --dataset evaluation_dataset.txt).
+# Each entry is a block of "Field: value" lines separated by a blank line.
+#   Category - summary | emergency | disaster_analysis | crew | technical | timeline
+#   Mission  - apollo_11 | apollo_13 | challenger (used with --use-mission-filter)
+#   Question - question sent to the RAG system
+#   Expected - reference answer the system should give (used for BLEU / ROUGE)
+# Lines starting with "#" are comments.
+
+Category: summary
+Mission: apollo_13
+Question: What went wrong during the Apollo 13 mission and how did the crew get back to Earth?
+Expected: About 56 hours into the flight an oxygen tank in the service module failed, causing a loss of oxygen and electrical power in the command module. The lunar landing was aborted and the crew used the lunar module Aquarius as a lifeboat, swinging around the Moon and returning safely to Earth on April 17, 1970.
+
+Category: emergency
+Mission: apollo_13
+Question: What did the Apollo 13 crew report to Mission Control right after the explosion?
+Expected: The crew reported "Houston, we've had a problem," followed by a main bus B undervolt indication, and soon after observed that they were venting something (oxygen) into space.
+
+Category: technical
+Mission: apollo_13
+Question: How did the Apollo 13 crew deal with the rising carbon dioxide levels in the lunar module?
+Expected: The lunar module's lithium hydroxide canisters could not remove enough carbon dioxide for three men, and the square command module canisters did not fit the round LM sockets. Following instructions from the ground, the crew built an adapter with plastic bags, cardboard and tape so the command module canisters could be used in the lunar module.
+
+Category: disaster_analysis
+Mission: challenger
+Question: What happened to Challenger shortly after launch according to the mission audio?
+Expected: About 73 seconds after liftoff the vehicle broke apart. The public affairs commentator reported that flight controllers were looking very carefully at the situation, that it was obviously a major malfunction, that there was no downlink, and that the vehicle had exploded.
+
+Category: timeline
+Mission: challenger
+Question: How long after liftoff did the Challenger accident happen and what were the vehicle's last reported speed and altitude?
+Expected: The accident happened about 1 minute 13 seconds (73 seconds) after liftoff, shortly after the "go at throttle up" call, when Challenger was travelling at about 2,900 feet per second at an altitude of about 9 nautical miles.
+
+Category: crew
+Mission: challenger
+Question: Who was on board Challenger for mission STS-51L?
+Expected: Commander Dick Scobee, pilot Mike Smith, mission specialists Ellison Onizuka, Judy Resnik and Ron McNair, payload specialist Greg Jarvis and teacher Christa McAuliffe, the first private citizen to fly in NASA's spaceflight participant program.
+
+Category: crew
+Mission: apollo_11
+Question: Who were the Apollo 11 astronauts and what was each one's role?
+Expected: Neil Armstrong was the commander, Michael Collins was the command module pilot who stayed in lunar orbit aboard Columbia, and Edwin "Buzz" Aldrin was the lunar module pilot who landed with Armstrong aboard the lunar module Eagle.
+
+Category: technical
+Mission: apollo_11
+Question: What were the 1201 and 1202 program alarms during the Apollo 11 lunar descent?
+Expected: They were alarms from the lunar module guidance computer indicating it was overloaded (executive overflow) and could not complete all its tasks. Mission Control determined it was safe to continue and gave a "go" for landing.
+
+Category: timeline
+Mission: apollo_11
+Question: When did Apollo 11 land on the Moon and when did Neil Armstrong first step onto the surface?
+Expected: The lunar module Eagle landed in the Sea of Tranquility on July 20, 1969, at about 102 hours 45 minutes ground elapsed time ("The Eagle has landed"). Armstrong stepped onto the surface about six and a half hours later, at about 109 hours 24 minutes GET, saying "That's one small step for man, one giant leap for mankind."
